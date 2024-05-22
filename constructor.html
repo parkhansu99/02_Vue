@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Human(name, age) {
+                this.name = name;
+                this.age = age;
+                this.intro = function () {
+                    document.write('name = ' + this.name + '<br>');
+                    document.write('age = ' + this.age + '<br>');
+                };
+            }
+            let kim = new Human('김상형', 29);
+            let lee = new Human('이승우', 42);
+            kim.intro();
+            lee.intro();
+        </script>
+    </body>
+</html>
