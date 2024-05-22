@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let human = {
+                name: '김상형',
+                age: 29,
+            };
+            human.salary = 520;
+            delete human.age;
+
+            document.write(human.name + '의 월급 : ' + human.salary + '<br>');
+            document.write(human.name + '의 나이 : ' + human.age + '<br>');
+        </script>
+    </body>
+</html>
