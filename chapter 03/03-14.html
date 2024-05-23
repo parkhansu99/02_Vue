@@ -1,0 +1,52 @@
+<style>
+    #list {
+        width: 600px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #list td,
+    #list th {
+        border: 1px solid black;
+        text-align: center;
+    }
+    #list > thead > tr {
+        color: yellow;
+        background-color: purple;
+    }
+</style>
+
+<div id="app">
+    <table id="list">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>전화번호</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="contact in contacts" :key="contact.no">
+                <td>{{contact.no}}</td>
+                <td>{{contact.name}}</td>
+                <td>{{contact.tel}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return {
+                contacts: [
+                    { no: 1, name: 'RM', tel: '010-3456-8299' },
+                    { no: 2, name: '정국', tel: '010-3456-8298' },
+                    { no: 3, name: '제이홉', tel: '010-3456-8297' },
+                    { no: 4, name: '슈가', tel: '010-3456-8296' },
+                ],
+            };
+        },
+    }).mount('#app');
+</script>
