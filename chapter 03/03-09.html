@@ -1,0 +1,19 @@
+<div id="app">
+    예금액: <input type="text" v-model="amount" />
+    <img
+        src="https://contactsvc.bmaster.kor.kr/img/error.png"
+        style="width: 15px; height: 15px; vertical-align: middle"
+    />
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return {
+                amount: '',
+            };
+        },
+    }).mount('#app');
+</script>

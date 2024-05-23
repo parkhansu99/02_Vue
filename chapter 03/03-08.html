@@ -1,0 +1,20 @@
+<div id="app">
+    <input type="text" :value="name" @input="ChangeName" />
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return {
+                name: '',
+            };
+        },
+        methods: {
+            ChangeName(e) {
+                this.name = e.target.value;
+            },
+        },
+    }).mount('#app');
+</script>
