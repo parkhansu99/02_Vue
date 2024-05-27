@@ -1,0 +1,30 @@
+<div id="app">
+  1보다 큰 수 : <input type="text" v-model.number="x" />
+  <br />
+  1부터 입력한 값까지의 합: <span>{{sum()}}</span>
+  <br />
+  1부터 입력한 값까지의 합: <span>{{sum()}}</span>
+  <br />
+  1부터 입력한 값까지의 합: <span>{{sum()}}</span>
+</div>
+<!-- 뷰(View) -->
+
+<script src="https://unpkg.com/vue"></script>
+<!-- 모델(Model) -->
+<script>
+  let vm = Vue.createApp({
+    name: 'App',
+    data() {
+      return { x: 0 };
+    },
+    methods: {
+      sum() {
+        console.log('## num: ' + this.num);
+        result = (Number(this.x) * (Number(this.x) + 1)) / 2;
+        if (isNaN(result)) return '숫자를 입력하세요';
+        return result;
+      },
+    },
+  }).mount('#app');
+</script>
+<!-- 뷰 모델(View Model) -->
