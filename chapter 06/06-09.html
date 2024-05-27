@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>06-08</title>
+        <style>
+            .btnColor {
+                background-color: aqua;
+                color: black;
+            }
+            .btnLayout {
+                text-align: center;
+                width: 120px;
+            }
+            .btnBorder {
+                border: khaki dashed 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <p>
+                <input
+                    type="checkbox"
+                    v-model="myStyle.btnColor"
+                    value="true"
+                />색상<br />
+                <input
+                    type="checkbox"
+                    v-model="myStyle.btnLayout"
+                    value="true"
+                />정렬, 크기<br />
+                <input
+                    type="checkbox"
+                    v-model="myStyle.btnBorder"
+                    value="true"
+                />테두리선<br />
+            </p>
+            <button v-bind:class="myStyle">버튼</button>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            let vm = Vue.createApp({
+                name: 'App',
+                data() {
+                    return {
+                        myStyle: {
+                            btnColor: false,
+                            btnLayout: false,
+                            btnBorder: false,
+                        },
+                    };
+                },
+            }).mount('#app');
+        </script>
+    </body>
+</html>

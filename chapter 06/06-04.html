@@ -1,0 +1,20 @@
+<div id="app">
+    <button id="btn1" v-bind:style="[myColor, myLayout]">버튼1</button>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return {
+                myColor: { backgroundColor: 'purple', color: 'yellow' },
+                myLayout: {
+                    width: '150px',
+                    height: '80px',
+                    textAllign: 'center',
+                },
+            };
+        },
+    }).mount('#app');
+</script>
