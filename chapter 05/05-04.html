@@ -1,0 +1,15 @@
+<div id="app">
+    <input id="a" type="text" v-bind:value="name" v-on:input="(e)=>this.name=e.target.value"></input>
+    <br>
+    입력하신 이름 : <span>{{name}}</span>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return { name: '' };
+        },
+    }).mount('#app');
+</script>
