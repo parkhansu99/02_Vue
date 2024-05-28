@@ -1,4 +1,5 @@
 <div id="app">
+<<<<<<< HEAD
   <button
     id="a"
     v-bind:style="{backgroundColor, color}"
@@ -7,10 +8,21 @@
   >
     테스트
   </button>
+=======
+    <button
+        id="a"
+        v-bind:style="{backgroundColor, color}"
+        v-on:mouseover.stop="overEvent"
+        v-on:mouseout.stop="outEvent"
+    >
+        테스트
+    </button>
+>>>>>>> 990273510eadb573fb64773ba28af64432acf304
 </div>
 
 <script src="https://unpkg.com/vue"></script>
 <script>
+<<<<<<< HEAD
   let vm = Vue.createApp({
     name: 'App',
     data() {
@@ -27,4 +39,22 @@
       },
     },
   }).mount('#app');
+=======
+    let vm = Vue.createApp({
+        name: 'App',
+        data() {
+            return { backgroundColor: 'aqua', color: 'black' };
+        },
+        methods: {
+            overEvent() {
+                this.backgroundColor = 'purple';
+                this.color = 'yellow';
+            },
+            outEvent() {
+                this.backgroundColor = 'aqua';
+                this.color = 'black';
+            },
+        },
+    }).mount('#app');
+>>>>>>> 990273510eadb573fb64773ba28af64432acf304
 </script>
