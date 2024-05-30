@@ -14,13 +14,13 @@
       return { x: 0, y: 0, sum: 0 };
     },
     watch: {
-      x(current) {
-        var result = Number(current) + Number(this.y);
+      x() {
+        var result = Number(this.x) + Number(this.y);
         if (isNaN(result)) this.sum = 0;
         else this.sum = result;
       },
-      y(current) {
-        var result = Number(current) + Number(this.x);
+      y() {
+        var result = Number(this.y) + Number(this.x);
         if (isNaN(result)) this.sum = 0;
         else this.sum = result;
       },
