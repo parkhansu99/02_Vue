@@ -1,0 +1,25 @@
+<div id="App">
+  x: <input type="text" v-model="키x" /><br />
+  y: <input type="text" v-model="키y" /><br />
+  <span>{{변수}}</span>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+  let vm = Vue.createApp({
+    name: 'App',
+    data() {
+      return { 키x: 0, 키y: 0, 변수: 0 }; // 함수:0을 해줘야 함
+    },
+    watch: {
+      키x(현재매개변수, 과거매개변수) {
+        this.변수 = Number(this.키y) + Number(현재매개변수); // 숫자로 바꿔주기
+        return this.변수;
+      },
+      키y(현재매개변수, 과거매개변수) {
+        this.변수 = Number(this.키x) + Number(현재매개변수); // 숫자로 바꿔주기
+        return this.변수;
+      },
+    },
+  }).mount('#app');
+</script>
