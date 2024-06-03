@@ -20,9 +20,8 @@
     computed: {
       sum() {
         console.log('## num: ' + this.num);
-        let n = parseInt(this.num);
-        if (Number.isNaN(n)) return 0;
-        return (n * (n + 1)) / 2;
+        let n = (Number(this.num) * (Number(this.num) + 1)) / 2;
+        return n;
       },
     },
   }).mount('#app');

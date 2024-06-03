@@ -4,24 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>06-05</title>
-    <style>
-      .buttonColor {
-        background-color: aqua;
-        color: black;
-      }
-      .buttonLayout {
-        text-align: center;
-        width: 120px;
-      }
-      .staticBorder {
-        border: khaki dashed 1px;
-      }
-    </style>
   </head>
 
   <body>
     <div id="app">
-      <button class="staticBorder" v-bind:class="myColor">테스트 버튼</button>
+      1부터 100까지만 입력가능합니다. <br />
+      점수 : <input type="text" v-model="키" /><img
+        src="https://contactsvc.bmaster.kro.kr/imgimg/error.png"
+        v-show="키<0||키>100"
+      />
     </div>
 
     <script src="https://unpkg.com/vue"></script>
@@ -30,7 +21,7 @@
         name: 'App',
         data() {
           return {
-            myColor: 'buttonColor buttonLayout',
+            키: 50,
           };
         },
       }).mount('#app');

@@ -1,0 +1,20 @@
+<div id="app">
+    <a href="https://naver.com" @click="함수">네이버</a>
+</div>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+  let vm = Vue.createApp({
+    name: 'App',
+    data() {
+      return {};
+    },
+    methods: {
+        함수(매개변수) {
+            if (!confirm("네이버로 이동할까요?")) {
+                매개변수.preventDefault();
+            }
+        }
+    },
+  }).mount('#app');
+</script>
