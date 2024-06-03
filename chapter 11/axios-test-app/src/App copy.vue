@@ -7,8 +7,8 @@
 <script setup>
 import axios from 'axios';
 
-const listUrl = '/todos';
-const todoUrlPrefix = '/todos/';
+const listUrl = '/api/todos';
+const todoUrlPrefix = '/api/todos/';
 
 const requestAPI = () => {
     // const url = '/todos';

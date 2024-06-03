@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-const listUrl = '/todos';
-const todoUrlPrefix = '/todos/';
+const listUrl = '/api/todos';
+const todoUrlPrefix = '/api/todos/';
 import axios from 'axios';
 const requestAPI = async () => {
     let todoList;

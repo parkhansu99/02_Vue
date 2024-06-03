@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const requestAPI = () => {
     // const url = '/todos/1';
-    const url = '/todos/1';
+    const url = '/api/todos/1';
     axios.get(url).then((response) => {
         console.log('# 응답객체 : ', response);
     });

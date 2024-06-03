@@ -7,7 +7,7 @@
 <script setup>
 import axios from 'axios';
 const requestAPI = async () => {
-    const url = '/todos';
+    const url = '/api/todos';
     try {
         const response = await axios.get(url, { timeout: 900 });
         console.log('# 응답객체 : ', response);
