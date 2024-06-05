@@ -10,6 +10,7 @@ export const useTodoListStore = defineStore('todoList', () => {
       { id: 4, todo: '야구경기 관람', done: false },
     ],
   });
+  const todoList = computed(() => state.todoList);
   // action
   const addTodo = (todo) => {
     state.todoList.push({ id: new Date().getTime(), todo, done: false });
@@ -20,12 +21,11 @@ export const useTodoListStore = defineStore('todoList', () => {
   };
   const toggleDone = (id) => {
     let index = state.todoList.findIndex((todo) => todo.id === id);
-    state.todoList[index].done = state.todoList[index].done;
+    state.todoList[index].done = !state.todoList[index].done;
   };
   // 계산된 속성
   const doneCount = computed(() => {
     return state.todoList.filter((todoItem) => todoItem.done === true).length;
   });
-  const todoList = computed(() => state.todoList);
   return { todoList, doneCount, addTodo, deleteTodo, toggleDone };
 });
