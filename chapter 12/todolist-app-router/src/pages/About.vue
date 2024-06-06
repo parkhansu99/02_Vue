@@ -1,11 +1,11 @@
 <template>
-    <div class="card card-body">
-        <h2>About</h2>
-    </div>
+  <div class="card card-body">
+    <h2>About</h2>
+  </div>
 </template>
 <script>
-import Header from '../components/Header.vue';
+// import Header from '../components/Header.vue';
 export default {
-    name: 'About',
+  name: 'About',
 };
 </script>
